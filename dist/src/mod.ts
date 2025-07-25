@@ -69,14 +69,14 @@ class AdjustableContainerFilters implements IPreSptLoadMod, IPostDBLoadMod
             if (this.modConfig[container._id].Filter[0] == null && 
                 this.modConfig[container._id].ExcludedFilter[0] == null)
             {
-                logger.log("[ACF]" + container._name + " no changes in file.", LogTextColor.GRAY);
+                logger.log("[ACF]" + this.modConfig[container._id].name + " no changes in file.", LogTextColor.GRAY);
                 return;
             }
             //this.removeItemsFromExcludedFilter(container);
             // this.removeItemsFromAcceptedFilter(container);
             // this.addItemsToExcludedFilter(container);
             //this.addItemsToAcceptedFilter(container);
-            logger.log("[ACF]" + container._name + " filters have been updated.", LogTextColor.YELLOW);
+            logger.log("[ACF]" + this.modConfig[container._id].name + " filters have been updated.", LogTextColor.YELLOW);
 
         });
         logger.log("[ACF]" + this.modLabel + " Load Successful...", LogTextColor.GREEN);
