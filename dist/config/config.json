@@ -1,0 +1,347 @@
+{
+    "enableLogging": false,
+    "removeAllFilters": false,
+    "Containers": [
+        "66bc98a01a47be227a5e956e",
+        "62a09d3bcf4a99369e262447",
+        "59fafd4b86f7745ca07e1232",
+        "5783c43d2459774bbe137486",
+        "60b0f6c058e0b0481a09ad11",
+        "590c60fc86f77412b13fddcf",
+        "5d235bb686f77443f4331278",
+        "619cbf7d23893217ec30b689",
+        "619cbf9e0a7c3a1a2731940a",
+        "5c093e3486f77430cb02e593",
+        "67d3ed3271c17ff82e0a5b0b",
+        "67600929bd0a0549d70993f6",
+        "59fb016586f7746d0d4b423a",
+        "5aafbcd986f7745e590fff23",
+        "59fb042886f7746c5005a7b2",
+        "5aafbde786f774389d0cbc0f",
+        "567143bf4bdc2d1a0f8b4567",
+        "5c127c4486f7745625356c13",
+        "5e2af55f86f7746d4159f07c",
+        "59fb023c86f7746d0d4b423c",
+        "5b6d9ce188a4501afc1b2b25",
+        "5c0a840b86f7742ffa4f2482",
+        "5732ee6a24597719ae0c0281",
+        "544a11ac4bdc2d470e8b456a",
+        "5857a8b324597729ab0a0e7d",
+        "59db794186f77448bc595262",
+        "5857a8bc2459772bad15db29",
+        "665ee77ccf2d642e98220bca",
+        "5c093ca986f7740a1867ab12",
+        "664a55d84a90fc2c8a6305c9",
+        "676008db84e242067d0dc4c9"
+      ],
+    "66bc98a01a47be227a5e956e": {
+      "name": "Streamer item case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "62a09d3bcf4a99369e262447": {
+      "name": "Gingy keychain",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "59fafd4b86f7745ca07e1232": {
+      "name": "Key tool",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "5783c43d2459774bbe137486": {
+      "name": "Simple Wallet",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "60b0f6c058e0b0481a09ad11": {
+      "name": "WZ Wallet",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "590c60fc86f77412b13fddcf": {
+      "name": "Docs case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "5d235bb686f77443f4331278": {
+      "name": "S I C C Pouch",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "619cbf7d23893217ec30b689": {
+      "name": "Injector case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "619cbf9e0a7c3a1a2731940a": {
+      "name": "Keycard holder",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "5c093e3486f77430cb02e593": {
+      "name": "Dogtag Case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "67d3ed3271c17ff82e0a5b0b": {
+      "name": "Key Case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "67600929bd0a0549d70993f6": {
+      "name": "Ballistic plate Case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "59fb016586f7746d0d4b423a": {
+      "name": "Money Case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "5aafbcd986f7745e590fff23": {
+      "name": "Medicine Case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "59fb042886f7746c5005a7b2": {
+      "name": "Item Case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "5aafbde786f774389d0cbc0f": {
+      "name": "Ammunition Case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "567143bf4bdc2d1a0f8b4567": {
+      "name": "Pistol Case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "5c127c4486f7745625356c13": {
+      "name": "Magazine Case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "5e2af55f86f7746d4159f07c": {
+      "name": "Grenade Case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "59fb023c86f7746d0d4b423c": {
+      "name": "Weapon Case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "5b6d9ce188a4501afc1b2b25": {
+      "name": "T H I C C Weapon Case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "5c0a840b86f7742ffa4f2482": {
+      "name": "T H I C C Item Case",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "5732ee6a24597719ae0c0281": {
+      "name": "Waist Pouch",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "544a11ac4bdc2d470e8b456a": {
+      "name": "Secure Alpha",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "5857a8b324597729ab0a0e7d": {
+      "name": "Secure Beta",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "59db794186f77448bc595262": {
+      "name": "Secure Epsilon",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "5857a8bc2459772bad15db29": {
+      "name": "Secure Gamma",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "665ee77ccf2d642e98220bca": {
+      "name": "Secure Gamma TUE",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "5c093ca986f7740a1867ab12": {
+      "name": "Secure Kappa",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "664a55d84a90fc2c8a6305c9": {
+      "name": "Secure Theta",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    },
+    "676008db84e242067d0dc4c9": {
+      "name": "Desecrated Kappa",
+      "removeFilters": false,
+      "ExcludedFilter": [
+        
+      ],
+      "Filter": [
+        
+      ]
+    }
+}
