@@ -47,13 +47,21 @@ class AdjustableContainerFilters implements IPreSptLoadMod, IPostDBLoadMod
             }
             if (this.modConfig.removeAllFilters)
             {
-                container._props.Grids[0]._props.filters = [];
+                container._props.Grids.forEach(grid => 
+                {
+                    grid._props.filters = [];
+                });
+                //container._props.Grids[0]._props.filters = [];
                 return;
             } 
             if (this.modConfig[container._id].removeFilters)
             {
                 logger.log("[ACF] Removing " + this.modConfig[container._id].name + "'s filters, make sure this loads after all item mods.", LogTextColor.YELLOW);
-                container._props.Grids[0]._props.filters = [];
+                container._props.Grids.forEach(grid => 
+                {
+                    grid._props.filters = [];
+                });
+                //container._props.Grids[0]._props.filters = [];
                 return;
             }
             if (this.modConfig[container._id].Filter[0] != null)
@@ -97,25 +105,47 @@ class AdjustableContainerFilters implements IPreSptLoadMod, IPostDBLoadMod
             if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element.toString(), LogTextColor.YELLOW);
             try
             {
-                const filters = itemProps.Grids[0]._props.filters;
-                if (filters[0]?.ExcludedFilter)
+                itemProps.Grids.forEach(grid => 
                 {
+                    const filters = grid._props.filters;
+                    if (filters[0]?.ExcludedFilter)
+                    {
                     // Finds item location in array by string
-                    const numb = filters[0]?.ExcludedFilter.indexOf(element);
-                    if (this.modConfig.enableLogging) this.logger.log("[ACF]" + numb.toString(), LogTextColor.GREEN);
+                        const numb = filters[0]?.ExcludedFilter.indexOf(element);
+                        if (this.modConfig.enableLogging) this.logger.log("[ACF]" + numb.toString(), LogTextColor.GREEN);
                     
-                    if (numb >= 0)
-                    {
+                        if (numb >= 0)
+                        {
                         // splice is used to delete item at array location
-                        const testItem = filters[0]?.ExcludedFilter.splice(numb, 1);
-                        if (this.modConfig.enableLogging) this.logger.log("[ACF]" + testItem + " deleted", LogTextColor.WHITE);
+                            const testItem = filters[0]?.ExcludedFilter.splice(numb, 1);
+                            if (this.modConfig.enableLogging) this.logger.log("[ACF]" + testItem + " deleted", LogTextColor.WHITE);
+                        }
+                        else
+                        {
+                            if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element + " not in items filter.", LogTextColor.WHITE);
+                        }
+                        if (this.modConfig.enableLogging) this.logger.log("[ACF] Modified  " + this.modConfig[itemId]?.name + "'s excluded filter", LogTextColor.GRAY);
                     }
-                    else
-                    {
-                        if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element + " not in items filter.", LogTextColor.WHITE);
-                    }
-                    if (this.modConfig.enableLogging) this.logger.log("[ACF] Modified  " + this.modConfig[itemId]?.name + "'s excluded filter", LogTextColor.GRAY);
-                }
+                });
+                // const filters = itemProps.Grids[0]._props.filters;
+                // if (filters[0]?.ExcludedFilter)
+                // {
+                //     // Finds item location in array by string
+                //     const numb = filters[0]?.ExcludedFilter.indexOf(element);
+                //     if (this.modConfig.enableLogging) this.logger.log("[ACF]" + numb.toString(), LogTextColor.GREEN);
+                    
+                //     if (numb >= 0)
+                //     {
+                //         // splice is used to delete item at array location
+                //         const testItem = filters[0]?.ExcludedFilter.splice(numb, 1);
+                //         if (this.modConfig.enableLogging) this.logger.log("[ACF]" + testItem + " deleted", LogTextColor.WHITE);
+                //     }
+                //     else
+                //     {
+                //         if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element + " not in items filter.", LogTextColor.WHITE);
+                //     }
+                //     if (this.modConfig.enableLogging) this.logger.log("[ACF] Modified  " + this.modConfig[itemId]?.name + "'s excluded filter", LogTextColor.GRAY);
+                // }
             }
             catch
             {
@@ -139,23 +169,43 @@ class AdjustableContainerFilters implements IPreSptLoadMod, IPostDBLoadMod
             if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element.toString(), LogTextColor.YELLOW);
             try
             {
-                const filters = itemProps.Grids[0]._props.filters;
-                if (filters[0]?.Filter)
+                itemProps.Grids.forEach(grid => 
                 {
+                    const filters = grid._props.filters;
+                    if (filters[0]?.Filter)
+                    {
                     // Finds item location in array by string
-                    const numb = filters[0]?.Filter.indexOf(element);
-                    if (numb >= 0)
-                    {
+                        const numb = filters[0]?.Filter.indexOf(element);
+                        if (numb >= 0)
+                        {
                         // splice is used to delete item at array location
-                        const testItem = filters[0]?.Filter.splice(numb, 1);
-                        if (this.modConfig.enableLogging) this.logger.log("[ACF]" + testItem + " deleted", LogTextColor.WHITE);
+                            const testItem = filters[0]?.Filter.splice(numb, 1);
+                            if (this.modConfig.enableLogging) this.logger.log("[ACF]" + testItem + " deleted", LogTextColor.WHITE);
+                        }
+                        else
+                        {
+                            if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element + " not in items filter.", LogTextColor.WHITE);
+                        }
+                        if (this.modConfig.enableLogging) this.logger.log("[ACF] Modified  " + this.modConfig[itemId]?.name + "'s allowed filter", LogTextColor.GRAY);
                     }
-                    else
-                    {
-                        if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element + " not in items filter.", LogTextColor.WHITE);
-                    }
-                    if (this.modConfig.enableLogging) this.logger.log("[ACF] Modified  " + this.modConfig[itemId]?.name + "'s allowed filter", LogTextColor.GRAY);
-                }
+                });
+                // const filters = itemProps.Grids[0]._props.filters;
+                // if (filters[0]?.Filter)
+                // {
+                //     // Finds item location in array by string
+                //     const numb = filters[0]?.Filter.indexOf(element);
+                //     if (numb >= 0)
+                //     {
+                //         // splice is used to delete item at array location
+                //         const testItem = filters[0]?.Filter.splice(numb, 1);
+                //         if (this.modConfig.enableLogging) this.logger.log("[ACF]" + testItem + " deleted", LogTextColor.WHITE);
+                //     }
+                //     else
+                //     {
+                //         if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element + " not in items filter.", LogTextColor.WHITE);
+                //     }
+                //     if (this.modConfig.enableLogging) this.logger.log("[ACF] Modified  " + this.modConfig[itemId]?.name + "'s allowed filter", LogTextColor.GRAY);
+                // }
             }   
             catch
             {
@@ -179,20 +229,37 @@ class AdjustableContainerFilters implements IPreSptLoadMod, IPostDBLoadMod
             if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element.toString(), LogTextColor.YELLOW);
             try
             {
-                const filters = itemProps.Grids[0]._props.filters;
-                if (filters[0]?.ExcludedFilter)
+                itemProps.Grids.forEach(grid => 
                 {
-                    if (this.modConfig[itemId]?.ExcludedFilter.length >= 1)
+                    const filters = grid._props.filters;
+                    if (filters[0]?.ExcludedFilter)
                     {
-                        filters[0]?.ExcludedFilter.push(element);
-                        if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element + " added", LogTextColor.WHITE);
+                        if (this.modConfig[itemId]?.ExcludedFilter.length >= 1)
+                        {
+                            filters[0]?.ExcludedFilter.push(element);
+                            if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element + " added", LogTextColor.WHITE);
+                        }
+                        else
+                        {
+                            if (this.modConfig.enableLogging) this.logger.log("[ACF] No items in mods excluded filter.", LogTextColor.WHITE);
+                        }
+                        if (this.modConfig.enableLogging) this.logger.log("[ACF] Modified  " + this.modConfig[itemId]?.name + "'s excluded filter", LogTextColor.GRAY);
                     }
-                    else
-                    {
-                        if (this.modConfig.enableLogging) this.logger.log("[ACF] No items in mods excluded filter.", LogTextColor.WHITE);
-                    }
-                    if (this.modConfig.enableLogging) this.logger.log("[ACF] Modified  " + this.modConfig[itemId]?.name + "'s excluded filter", LogTextColor.GRAY);
-                }
+                });
+                // const filters = itemProps.Grids[0]._props.filters;
+                // if (filters[0]?.ExcludedFilter)
+                // {
+                //     if (this.modConfig[itemId]?.ExcludedFilter.length >= 1)
+                //     {
+                //         filters[0]?.ExcludedFilter.push(element);
+                //         if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element + " added", LogTextColor.WHITE);
+                //     }
+                //     else
+                //     {
+                //         if (this.modConfig.enableLogging) this.logger.log("[ACF] No items in mods excluded filter.", LogTextColor.WHITE);
+                //     }
+                //     if (this.modConfig.enableLogging) this.logger.log("[ACF] Modified  " + this.modConfig[itemId]?.name + "'s excluded filter", LogTextColor.GRAY);
+                // }
             }
             catch
             {
@@ -217,21 +284,39 @@ class AdjustableContainerFilters implements IPreSptLoadMod, IPostDBLoadMod
             if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element.toString(), LogTextColor.YELLOW);
             try
             {
-                const filters = itemProps.Grids[0]._props.filters;
-                if (filters[0]?.Filter)
+                itemProps.Grids.forEach(grid => 
                 {
-                    if (this.modConfig[itemId]?.Filter.length >= 1)
+                    const filters = grid._props.filters;
+                    if (filters[0]?.Filter)
                     {
-                        filters[0]?.Filter.push(element);
-                        if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element + " added", LogTextColor.WHITE);
-                    }
-                    else
-                    {
-                        if (this.modConfig.enableLogging) this.logger.log("[ACF] No items in mods filter.", LogTextColor.WHITE);
-                    }
+                        if (this.modConfig[itemId]?.Filter.length >= 1)
+                        {
+                            filters[0]?.Filter.push(element);
+                            if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element + " added", LogTextColor.WHITE);
+                        }
+                        else
+                        {
+                            if (this.modConfig.enableLogging) this.logger.log("[ACF] No items in mods filter.", LogTextColor.WHITE);
+                        }
                     
-                    if (this.modConfig.enableLogging) this.logger.log("[ACF] Modified  " + this.modConfig[itemId]?.name + "'s allowed filter", LogTextColor.GRAY);
-                }
+                        if (this.modConfig.enableLogging) this.logger.log("[ACF] Modified  " + this.modConfig[itemId]?.name + "'s allowed filter", LogTextColor.GRAY);
+                    }
+                });
+                // const filters = itemProps.Grids[0]._props.filters;
+                // if (filters[0]?.Filter)
+                // {
+                //     if (this.modConfig[itemId]?.Filter.length >= 1)
+                //     {
+                //         filters[0]?.Filter.push(element);
+                //         if (this.modConfig.enableLogging) this.logger.log("[ACF]" + element + " added", LogTextColor.WHITE);
+                //     }
+                //     else
+                //     {
+                //         if (this.modConfig.enableLogging) this.logger.log("[ACF] No items in mods filter.", LogTextColor.WHITE);
+                //     }
+                    
+                //     if (this.modConfig.enableLogging) this.logger.log("[ACF] Modified  " + this.modConfig[itemId]?.name + "'s allowed filter", LogTextColor.GRAY);
+                // }
             }
             catch
             {
